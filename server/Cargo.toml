@@ -7,3 +7,6 @@ edition = "2021"
 dioxus = { workspace = true, features = ["fullstack"] }
 # https://dioxuslabs.com/learn/0.6/guides/fullstack/managing_dependencies#adding-server-only-dependencies
 tokio = { version = "1.44.0", features = ["full"], optional = true }
+
+[features]
+server = ["dep:tokio"]
