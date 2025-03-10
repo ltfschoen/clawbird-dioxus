@@ -24,8 +24,8 @@ mod tokio_utilities {
 #[server]
 pub async fn get_file_contents(filename: String) -> Result<String, ServerFnError> {
   let absolute_path = std::env::current_dir()?;
-  let path = append_file_to_parent_dir(&absolute_path, &filename);
-  let file = read_file(path).await?;
+  let path = tokio_utilities::append_file_to_parent_dir(&absolute_path, &filename);
+  let file = tokio_utilities::read_file(path).await?;
   Ok(file)
 }
 

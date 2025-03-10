@@ -9,4 +9,6 @@ dioxus = { workspace = true, features = ["fullstack"] }
 tokio = { version = "1.44.0", features = ["full"], optional = true }
 
 [features]
+# The server feature should be enabled when building the server
+# Any dependencies that are only required for the server build should be optional and only enabled in the server feature
 server = ["dep:tokio"]

@@ -1120,6 +1120,7 @@ dependencies = [
  "tower-layer",
  "tracing",
  "tracing-futures",
+ "web-sys",
 ]
 
 [[package]]
@@ -5233,6 +5234,7 @@ version = "0.1.0"
 dependencies = [
  "dioxus",
  "ui",
+ "web-sys",
 ]
 
 [[package]]

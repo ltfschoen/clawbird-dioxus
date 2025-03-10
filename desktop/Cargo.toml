@@ -9,5 +9,7 @@ ui = { workspace = true }
 
 [features]
 default = []
+# The web feature is enabled by the CLI when building the client (mobile) build
+# Any web specific dependencies should be optional and only enabled in the mobile feature (for example, tokio should be added here)
 desktop = ["dioxus/desktop"]
-server = ["dioxus/server"]
+server = ["dioxus/server", "ui/server"]

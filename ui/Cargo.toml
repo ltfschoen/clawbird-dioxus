@@ -6,9 +6,13 @@ edition = "2021"
 [dependencies]
 dioxus = { workspace = true }
 server = { workspace = true }
+
+[features]
+server = ["server/server"] # Re-export the server feature from the server crate for any server specific dependencies
+
 # server = { workspace = true, features = [], optional = true }
 
-# [features]
-# default = []
-# # server = ["dioxus/server"]
-# server = ["dep:server"]
+# # [features]
+# # default = []
+# # # server = ["dioxus/server"]
+# # server = ["dep:server"]

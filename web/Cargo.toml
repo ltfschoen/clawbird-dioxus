@@ -7,9 +7,12 @@ edition = "2021"
 dioxus = { workspace = true, features = ["router"] }
 ui = { workspace = true }
 # https://dioxuslabs.com/learn/0.6/guides/fullstack/managing_dependencies#adding-client-only-dependencies
-# web-sys = { version = "0.3.60", features = ["console"], optional = true }
+web-sys = { version = "0.3.60", features = ["console"], optional = true }
 
 [features]
 default = []
-# web = ["dioxus/web", "dep:web-sys"]
-server = ["dioxus/server"]
+
+# The web feature is enabled by the CLI when building the client (web) build
+# Any web specific dependencies should be optional and only enabled in the web feature (for example, web-sys should be added here)
+web = ["dioxus/web", "dep:web-sys"]
+server = ["dioxus/server", "ui/server"]
