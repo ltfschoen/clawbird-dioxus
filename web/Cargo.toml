@@ -6,8 +6,10 @@ edition = "2021"
 [dependencies]
 dioxus = { workspace = true, features = ["router"] }
 ui = { workspace = true }
+# https://dioxuslabs.com/learn/0.6/guides/fullstack/managing_dependencies#adding-client-only-dependencies
+# web-sys = { version = "0.3.60", features = ["console"], optional = true }
 
 [features]
 default = []
-web = ["dioxus/web"]
+# web = ["dioxus/web", "dep:web-sys"]
 server = ["dioxus/server"]
