@@ -41,7 +41,7 @@ If you are using M1, you will have to run `cargo build --target x86_64-apple-ios
 
 ```
 rustup target add x86_64-apple-ios
-cargo build --target x86_64-apple-ios
+cargo build --target x86_64-apple-ios --features server
 ```
 
 ## Serving
@@ -60,6 +60,7 @@ If using Tailwind, make sure to run the Tailwind CLI.
 dx serve \
   --package web \
   --platform web \
+  --features server \
   --open
 ```
 

@@ -6,3 +6,9 @@ edition = "2021"
 [dependencies]
 dioxus = { workspace = true }
 server = { workspace = true }
+# server = { workspace = true, features = [], optional = true }
+
+# [features]
+# default = []
+# # server = ["dioxus/server"]
+# server = ["dep:server"]
